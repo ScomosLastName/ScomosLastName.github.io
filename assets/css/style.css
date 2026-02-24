@@ -75,6 +75,17 @@ nav {
   backdrop-filter: blur(6px);
 }
 
+nav::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: env(safe-area-inset-top);
+  background: var(--paper);
+  z-index: 101;
+}
+
 .nav-logo {
   font-family: 'DM Serif Display', serif;
   font-size: 1.2rem;
