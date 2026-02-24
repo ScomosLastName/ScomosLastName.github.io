@@ -408,8 +408,8 @@ footer {
   }
   
   nav {
-    top: env(safe-area-inset-top);
-    padding: 1.5rem 3rem;
+    top: 0;
+    padding: calc(env(safe-area-inset-top) + 1.5rem) 3rem 1.5rem 3rem;
   }
   
   .nav-links {
