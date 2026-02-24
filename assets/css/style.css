@@ -402,8 +402,14 @@ footer {
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  nav { 
-    padding: max(1.5rem, env(safe-area-inset-top)) 3rem 1.5rem 3rem;
+  body {
+    padding-top: env(safe-area-inset-top);
+    background-color: var(--paper);
+  }
+  
+  nav {
+    top: env(safe-area-inset-top);
+    padding: 1.5rem 3rem;
   }
   
   .nav-links {
