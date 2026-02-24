@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samuel Morriss — Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="#hero" class="nav-logo">Samuel Morriss</a>
+    <ul class="nav-links">
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+  </nav>
+
+  <section id="hero">
+    <div class="hero-text reveal">
+      <h1>Building things<br>for the <em>web.</em></h1>
+      <p>BICT undergrad at the University of Tasmainia, with a double major in Artificial Intellegence and, Application and Web Development. I like clean code, thoughtful design, and problem solving.</p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-accent">View Work</a>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-aside reveal" style="transition-delay:0.15s">
+      <div class="stack-item">
+        <div class="stack-dot"></div>
+        <span class="stack-label">Status</span>
+        <span class="stack-value">Open to internships</span>
+      </div>
+      <div class="stack-item">
+        <div class="stack-dot"></div>
+        <span class="stack-label">University</span>
+        <span class="stack-value">University of Tasmainia, BICT '27</span>
+      </div>
+      <div class="stack-item">
+        <div class="stack-dot"></div>
+        <span class="stack-label">Focus</span>
+        <span class="stack-value">Artificial Intellegence and Web Development</span>
+      </div>
+      <div class="stack-item">
+        <div class="stack-dot"></div>
+        <span class="stack-label">Currently Learning</span>
+        <span class="stack-value">LUA, PHP, HTML, CSS, JS</span>
+      </div>
+      <div class="stack-item">
+        <div class="stack-dot"></div>
+        <span class="stack-label">Location</span>
+        <span class="stack-value">Hobart, Tasmainia, Australia</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="section-header reveal">
+      <span class="section-num">01 —</span>
+      <h2 class="section-title">Projects</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- ════ ADD NEW PROJECTS BELOW THIS LINE ════ -->
+
+      <div class="project-card reveal">
+        <span class="project-tag">Discord Event Loggin</span>
+        <h3>FiveM-Discord-Logging</h3>
+        <p>Simple Script To log events and functions in a FiveM script Via Exports. Easily expandable for more events, Tracking multiple account Identifiers.</p>
+        <div class="project-stack">
+          <span>LUA</span>
+        </div>
+        <a href="https://github.com/ScomosLastName/FiveM-Discord-Logging" class="project-link">
+          View Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H6M12 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:0.08s">
+        <span class="project-tag">Java Graphing</span>
+        <h3>Point-Plotting</h3>
+        <p>A work in progress application derrived from a previous project, allowing for the creation and display of line graphs using Java.</p>
+        <div class="project-stack">
+          <span>Java</span>
+        </div>
+        <a href="https://github.com/ScomosLastName/Point-Plotting" class="project-link">
+          View Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H6M12 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal" style="transition-delay:0.16s">
+        <span class="project-tag">Discord Bot</span>
+        <h3>Pol Air Status</h3>
+        <p>Discord bot allowing for police RP in FiveM servers, tracking which user has interacted with the bot as well as timeing how long it has been "Deployed For".</p>
+        <div class="project-stack">
+          <span>JavaScript</span>
+        </div>
+        <a href="https://github.com/ScomosLastName/Pol-Air-Status" class="project-link">
+          View Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H6M12 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <div class="project-card reveal">
+        <span class="project-tag">FiveM Script</span>
+        <h3>FiveM FireWorks</h3>
+        <p>An expansion of an existing repository by GasparMPereira, this script allows for server staff members to control individual firework locations using a custiom in-game UI.</p>
+        <div class="project-stack">
+          <span>Lua</span><span>HTML</span><span>CSS</span><span>JavaScript</span>
+        </div>
+        <a href="https://github.com/ScomosLastName/FiveM-Fireworks-Script" class="project-link">
+          View Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H6M12 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      <!-- ════ ADD NEW PROJECTS ABOVE THIS LINE ════
+
+      Template to copy:
+
+      <div class="project-card reveal">
+        <span class="project-tag">YOUR CATEGORY</span>
+        <h3>Project Name</h3>
+        <p>Short description of what the project does and why it's interesting.</p>
+        <div class="project-stack">
+          <span>Tech 1</span><span>Tech 2</span><span>Tech 3</span>
+        </div>
+        <a href="YOUR_LINK" class="project-link">
+          View Project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H6M12 2V8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+      ════════════════════════════════════════════ -->
+
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="section-header reveal">
+      <span class="section-num">02 —</span>
+      <h2 class="section-title">About</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="reveal">
+        <p>I'm a second-year BICT student, with a background in volunteer game design for the FiveM server Apollo Networks. I have worked on many personal projects an a range of areas, with a preference to upload my compleated passion projects to github where they could help someone else in the future.</p>
+        <p>When I'm not in lecture or staring at code, I like to spend time working on my car, with a passion for music and audio, I have put alot of work into custom sound a systems, doing so using my existing knowledge and experience working with electronics and circuitry.</p>
+        <p>I have a passion for accessability with the goal to make all my projects as accessable to as many people as possible, through thoughtful deffesign and colour palletes as well as intuitive UI layouts.</p>
+        <br>
+        <a href="assets/resume.pdf" class="btn" download>Download Résumé</a>
+      </div>
+
+      <div class="about-facts reveal" style="transition-delay:0.1s">
+        <div class="fact-row"><span class="fact-key">Degree</span><span class="fact-val">Bachelor of Information and Communication Technology</span></div>
+        <div class="fact-row"><span class="fact-key">Major</span><span class="fact-val">Artifical Intelegence; Application and Web Development</span></div>
+        <div class="fact-row"><span class="fact-key">Expected Grad</span><span class="fact-val">November 2027</span></div>
+        <div class="fact-row"><span class="fact-key">ATAR</span><span class="fact-val">62.95</span></div>
+        <div class="fact-row"><span class="fact-key">Relevant Courses</span><span class="fact-val">Algorithms, ML, OS, Databases</span></div>
+        <div class="fact-row"><span class="fact-key">Languages</span><span class="fact-val">Python, HTML, CSS, JavaScript, Java, C, Lua</span></div>
+        <div class="fact-row"><span class="fact-key">Interests</span><span class="fact-val">Programming, Electronics, Mechanics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="reveal">
+      <h2 class="section-title">Let's build<br><em>something.</em></h2>
+      <p>Open to internships, research opportunities, or just a good conversation about code.</p>
+      <div class="contact-links">
+        <a href="mailto:samuel.morriss@outlook.com" class="btn btn-accent">Say Hello</a>
+        <a href="https://github.com/ScomosLastName" target="_blank" class="btn">GitHub</a>
+        <a href="https://www.linkedin.com/in/samuel-morriss-681a0b354/" target="_blank" class="btn">LinkedIn</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Samuel Morriss © 2026</span>
+    <span>Designed & built from scratch using Claude AI.</span>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
