@@ -78,6 +78,8 @@ nav {
   background: var(--paper);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(6px);
+
+  box-shadow: 0 -100px 0 100px var(--paper);
 }
 
 nav::before {
