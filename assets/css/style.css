@@ -9,7 +9,10 @@
   --card: #efeae1;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* background: var(--ink); */
+}
 
 body {
   background: var(--paper);
@@ -19,6 +22,20 @@ body {
   line-height: 1.7;
   overflow-x: hidden;
   padding-top: calc(90px + env(safe-area-inset-top));
+}
+
+/* iOS notch / safe-area top paint layer (solid block behind the notch) */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: constant(safe-area-inset-top);
+  height: env(safe-area-inset-top, 0px);
+  background: var(--paper);
+  pointer-events: none;
+  z-index: 10000;
 }
 
 /* ── DARK MODE ── */
