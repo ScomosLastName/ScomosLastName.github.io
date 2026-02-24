@@ -34,3 +34,12 @@ toggle.addEventListener('click', () => {
   moon.style.display = isDark ? 'none' : 'block';
   localStorage.setItem('theme', isDark ? 'dark' : 'light');
 });
+
+// Hamburger menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open');
+});
