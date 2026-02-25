@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Discord Logging — Samuel Morriss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ── PROJECT PAGE SPECIFIC ── */
+    .project-hero {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 3rem 4rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      transition: color 0.2s;
+    }
+
+    .project-hero .back-link:hover { color: var(--ink); }
+
+    .project-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-meta {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item { display: flex; flex-direction: column; gap: 0.3rem; }
+    .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); }
+    .meta-value { font-size: 13px; }
+
+    /* ── BODY CONTENT ── */
+    .project-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 3rem;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      margin: 3rem 0 1rem;
+    }
+
+    /* ── PHOTO GRID ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Full width single image */
+    .photo-full img {
+      width: 100%;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    /* ── LINKS BAR ── */
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 3rem 0;
+      padding-top: 3rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 768px) {
+      .project-hero { padding: 7rem 1.5rem 3rem; }
+      .project-body { padding: 3rem 1.5rem; }
+      .project-meta { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV — paste your full nav here -->
+  <nav>
+    <a href="index.html" class="nav-logo">Samuel Morriss</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex; gap:0.75rem; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="project-hero reveal">
+    <a href="index.html#projects" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M2 7L6 3M2 7L6 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      All Projects
+    </a>
+    <h1><em>FiveM </em>Discord Logging</h1>
+    <div class="project-meta">
+      <div class="meta-item">
+        <span class="meta-label">Category</span>
+        <span class="meta-value">Game Development</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Year</span>
+        <span class="meta-value">2025</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack</span>
+        <span class="meta-value">LUA</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Status</span>
+        <span class="meta-value">Live</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="project-body">
+
+    <!-- Full width banner image -->
+    <div class="photo-full reveal">
+      <img src="assets/images/project-discord_logging/banner.png" alt="Project banner" />
+    </div>
+
+    <h2>Overview</h2>
+    <p>This project provides a straightforward way for other scripts to log detailed in-game events to Discord via webhooks. By exposing a simple <code>exports</code> function on the client, scripts can trigger a server event that formats and sends richly structured Discord embed messages, including information like player, command, arguments, and identifiers.</p>
+    <p>The system is divided into a lightweight client export that accepts event data, and a robust server handler which assembles and formats the embed payload before dispatching it to Discord. The implementation takes care to handle missing identifier fields gracefully, and encapsulates all HTTP and embed logic server-side, allowing for easy integration and minimal dependencies for resource authors.</p>
+
+    <h2>How it works</h2>
+    <p>
+      This Discord logging system is designed with simplicity and portability in mind for FiveM developers. The client code exposes a single <code>exports("LogEvent")</code> function that scripts can easily call, passing an event name, event details, and your Discord webhook. When triggered, it simply fires a custom server event, offloading all the formatting and network duties to the server—keeping client code extremely lightweight.
+    </p>
+    <p>
+      The server-side implementation then takes over, collecting player info, a robust set of identifiers (Discord, Steam, license, etc.), formatting an embed payload, and securely posting it to Discord using <code>PerformHttpRequest</code>. Fields are included or gracefully replaced with "N/A" if not present, reducing issues with partial player data. Commands, usage arguments, and user identifiers are all made visible in the resulting Discord log for easy moderation or auditing.
+    </p>
+    <p>
+      This architecture means no sensitive details or HTTP logic need to touch client code, making it safe for exports—while keeping all formatting and integration logic configurable and maintainable in server resources. The clean separation also keeps the exported API simple, letting other resources log with one function call and minimal boilerplate.
+    </p>
+
+    <!-- Photo grid -->
+    <!-- <div class="photo-grid reveal">
+      <img src="assets/images/projects/project-name/screen-1.jpg" alt="Screenshot 1" />
+      <img src="assets/images/projects/project-name/screen-2.jpg" alt="Screenshot 2" />
+      <img src="assets/images/projects/project-name/screen-3.jpg" alt="Screenshot 3" />
+    </div> -->
+
+    <h2>What I learned</h2>
+    <p>Building this logging system taught the importance of keeping client code minimal and offloading sensitive operations, like HTTP requests and identifier processing, to the server side for better security and maintainability. I learned practical techniques for collecting robust player metadata, including gracefully handling cases where identifiers may be missing, and for structuring Discord embed payloads in a clear and audit-friendly way. Designing a clean, single-function client export and a server-side handler gave me experience with modular API design in Lua for FiveM resources. I also refined my approach to error handling, payload formatting, and decoupling resource configuration—skills which will be broadly valuable in future game scripting and tooling projects.</p>
+
+    <!-- Links -->
+    <div class="project-links reveal">
+      <!-- <a href="https://www.apollonetworks.gg/" target="_blank" class="btn btn-accent">Live Site</a> -->
+      <a href="https://github.com/ScomosLastName/FiveM-Discord-Logging" target="_blank" class="btn">GitHub Repo</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Samuel Morriss © 2025</span>
+    <span>Designed & built from scratch</span>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

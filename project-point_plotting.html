@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Point-Plotting — Samuel Morriss</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ── PROJECT PAGE SPECIFIC ── */
+    .project-hero {
+      min-height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 8rem 3rem 4rem;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .project-hero .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 12px;
+      text-decoration: none;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      transition: color 0.2s;
+    }
+
+    .project-hero .back-link:hover { color: var(--ink); }
+
+    .project-hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-hero h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .project-meta {
+      display: flex;
+      gap: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-item { display: flex; flex-direction: column; gap: 0.3rem; }
+    .meta-label { font-size: 10px; text-transform: uppercase; letter-spacing: 0.2em; color: var(--accent); }
+    .meta-value { font-size: 13px; }
+
+    /* ── BODY CONTENT ── */
+    .project-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 5rem 3rem;
+    }
+
+    .project-body p {
+      color: var(--muted);
+      line-height: 1.9;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-body h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.8rem;
+      margin: 3rem 0 1rem;
+    }
+
+    /* ── PHOTO GRID ── */
+    .photo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .photo-grid img {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      display: block;
+    }
+
+    /* Full width single image */
+    .photo-full img {
+      width: 100%;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+
+    /* ── LINKS BAR ── */
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin: 3rem 0;
+      padding-top: 3rem;
+      border-top: 1px solid var(--line);
+    }
+
+    @media (max-width: 768px) {
+      .project-hero { padding: 7rem 1.5rem 3rem; }
+      .project-body { padding: 3rem 1.5rem; }
+      .project-meta { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV — paste your full nav here -->
+  <nav>
+    <a href="index.html" class="nav-logo">Samuel Morriss</a>
+    <ul class="nav-links">
+      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div style="display:flex; gap:0.75rem; align-items:center;">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="project-hero reveal">
+    <a href="index.html#projects" class="back-link">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M12 7H2M2 7L6 3M2 7L6 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      All Projects
+    </a>
+    <h1>Point-<em>Plotting</em></h1>
+    <div class="project-meta">
+      <div class="meta-item">
+        <span class="meta-label">Category</span>
+        <span class="meta-value">Desktop App</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Year</span>
+        <span class="meta-value">2024</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Stack</span>
+        <span class="meta-value">Java (Swing)</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Status</span>
+        <span class="meta-value">In Development</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="project-body">
+
+    <!-- Full width banner image -->
+    <!-- <div class="photo-full reveal">
+      <img src="assets/images/projects/point-plotting/banner.jpg" alt="Point Plotting app banner" />
+    </div> -->
+
+    <h2>Overview</h2>
+    <p>
+      <strong>Point-Plotting</strong> is a desktop application built in Java, intended for users who need to quickly create and visualize line graphs based on simple point input. This project was inspired by the need to move beyond plotting data in spreadsheets (like Excel or Google Sheets) and instead provide a tailored, user-friendly graphing environment.
+    </p>
+    <p>
+      The application is a work in progress and is based on a prior project, now reimagined and refactored for better usability and extensibility. It's primarily designed for students, teachers, or anyone who wants an easy way to enter X/Y values and see them visualized as lines or points. It also serves as a way for me to deepen my understanding of Java Swing and desktop UI design.
+    </p>
+
+    <h2>How it works</h2>
+    <p>
+      Point-Plotting centers around a basic UI using Java Swing. Users can input pairs of X and Y coordinates, add them to a set, and visualize the connections as a line graph. The graph updates dynamically as new points are added or removed. 
+    </p>
+    <p>
+      The main challenges addressed were:
+      <ul>
+        <li>Implementing smooth coordinate-to-pixel mapping regardless of window size;</li>
+        <li>Allowing flexible point input and easy clearing or resetting;</li>
+        <li>Drawing scalable axes, gridlines, and customizable point/line styling.</li>
+      </ul>
+    </p>
+    <p>
+      The project is pure Java — no dependencies other than standard JDK. The code is structured for easy future expansion, such as supporting multiple data sets, exporting graphs as images, or enabling more advanced chart types.
+    </p>
+
+    <!-- Photo grid -->
+    <!-- <div class="photo-grid reveal">
+      <img src="assets/images/projects/point-plotting/screen1.png" alt="Point-Plotting: Main interface with a plotted graph" />
+      <img src="assets/images/projects/point-plotting/screen2.png" alt="Point-Plotting: Point entry dialog or form" />
+      <img src="assets/images/projects/point-plotting/screen3.png" alt="Point-Plotting: Customization or appearance options" />
+    </div> -->
+
+    <h2>What I learned</h2>
+    <p>
+      This project has deepened my experience with Java's Swing framework, particularly dynamic UI updates, custom component painting, and event-driven programming. 
+      I learned a lot about mapping between logical (data) coordinates and screen pixels, and about making UI logic extensible for future features. If I were to start again, I would plan earlier for custom axes or zoom/pan interactions, and I would modularize drawing code for even easier extensibility.
+    </p>
+    <p>
+      Point-Plotting has also helped me develop an eye for user-centric design: simple forms, immediate feedback, and a clear focus on the user's workflow.
+    </p>
+
+    <!-- Links -->
+    <div class="project-links reveal">
+      <a href="https://github.com/ScomosLastName/Point-Plotting" target="_blank" class="btn">GitHub Repo</a>
+    </div>
+
+  </div>
+
+  <footer>
+    <span>Samuel Morriss © 2025</span>
+    <span>Designed & built from scratch</span>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

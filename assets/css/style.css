@@ -513,3 +513,31 @@ footer {
 .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
 .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+ul, ol {
+  padding-left: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: 'DM Mono', monospace;
+  background: transparent;
+  /* inherits colors for dark/light mode via var(--ink) */
+}
+
+li {
+  margin-bottom: 0.3em;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+  font-family: 'DM Mono', monospace;
+  background: transparent;
+  /* inherits colors for dark/light mode via var(--ink) */
+}
+
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
+}
